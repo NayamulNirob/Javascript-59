@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label for="">Number 01</label>
+<input type="number" id="number1"><br>
+<label for="">Number 02</label>
+<input type="number" id="number2"><br>
+
+<input type="submit" value="Calculation" onclick="doSum()">
+
+
+
+
+<script>
+
+function doSum(){
+
+let number1=document.getElementById("number1").value;
+let number2=document.getElementById("number2").value;
+
+
+let num1Toint=parseFloat(number1);
+let num2Toint=parseFloat(number2);
+
+
+let result=num1Toint+num2Toint;
+
+document.write(result);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

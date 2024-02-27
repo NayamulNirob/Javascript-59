@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<label for="">Number</label>
+<input type="text"  id="evenodd"><br>
+
+<input type="submit" value="Check" onclick="checkEvenOdd()" >
+
+<p id="result">Result</p>
+
+
+<script>
+
+function checkEvenOdd(){
+
+let userInput=document.getElementById("evenodd").value;
+
+if(userInput%2==0){
+
+document.getElementById("result").innerHTML="Even";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="Odd";
+
+}
+
+}
+
+
+
+
+</script>
+    
+</body>
+</html>
