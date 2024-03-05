@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <script>
+
+        let myArray = [63, 58, 29, 75, 68, 5, 824, 985, 527, 456, 655, 696, 455, 564, 955, 565, 656];
+
+
+        document.write(myArray);
+
+
+
+        for (let x = 0; x < myArray.length; x++) {
+
+            for (let y = 0; y < myArray.length - x - 1; y++) {
+
+                if (myArray[y]>myArray[y+1]) { 
+
+                    temp=myArray[y],
+                    myArray[y]=myArray[y+1];
+                    myArray[y+1]=temp;
+                }
+
+
+
+            }
+
+
+
+
+
+
+        }
+
+document.write(" <br>new"+ myArray);
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<label for="">number1</label><br>
+<input type="number" id="box1"><br>
+<label for="">number2</label><br>
+<input type="number" id="box2"><br>
+
+
+<br><input type="submit" value="Sum" onclick="doSum()">
+<input type="submit" value="Substration" onclick="doSubstration()">
+<input type="submit" value="Multiplication" onclick="doMultiplication()"><br>
+<br><input type="submit" value="Division" onclick="doDivision()">
+<input type="submit" value="Exponentiation" onclick="doExponentiation()">
+<input type="submit" value="Modulus" onclick="doModulus()">
+
+
+
+<script>
+
+function doSum(){
+let num1=parseFloat(document.getElementById("box1").value);
+let num2=parseFloat(document.getElementById("box2").value);
+
+
+let result=(num1+num2);
+
+document.write(result);
+
+}
+
+
+function doSubstration(){
+
+let num1=parseFloat(document.getElementById("box1").value);
+let num2=parseFloat(document.getElementById("box2").value);
+
+let result=(num1-num2);
+
+document.write(result);
+
+
+}
+
+
+function doMultiplication(){
+
+let num1=parseFloat(document.getElementById("box1").value);
+let num2=parseFloat(document.getElementById("box2").value);
+
+let result=(num1*num2);
+
+
+document.write(result);
+
+}
+
+function doDivision(){
+
+let num1=parseFloat(document.getElementById("box1").value);
+let num2=parseFloat(document.getElementById("box2").value);
+
+let result=(num1/num2);
+
+
+document.write(result);
+
+}
+
+
+function doExponentiation(){
+
+let num1=parseFloat(document.getElementById("box1").value);
+let num2=parseFloat(document.getElementById("box2").value);
+
+let result=(num1**num2);
+
+
+document.write(result);
+
+}
+
+function doModulus(){
+
+let num1=parseFloat(document.getElementById("box1").value);
+let num2=parseFloat(document.getElementById("box2").value);
+
+let result=(num1%num2);
+
+
+document.write(result);
+
+}
+
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+let bubbleShort=[10,50,61,89,2,56,58,25,28,63,36,37,52,34];
+
+document.write( "num1<br>" +bubbleShort+"<br>");
+
+for(let p=0;p<bubbleShort.length;p++){
+
+    for(let q=0;q<bubbleShort.length-p-1;q++){
+
+        if(bubbleShort[q]>bubbleShort[q+1]){
+
+            let temp=0;
+            temp=bubbleShort[q];
+            bubbleShort[q]=bubbleShort[q+1];
+            bubbleShort[q+1]=temp;
+        }
+
+
+    }
+
+}
+
+document.write( " Fainal<br>"+ bubbleShort)
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

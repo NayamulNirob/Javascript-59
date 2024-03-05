@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let bubbleShort = [5, 9, 8, 7, 4, 6, 2, 8, 63, 9, 5, 58, 52, 65, 45, 565, 6565, 5656, 655, 5665, 656];
+
+        document.write("First <br>" + bubbleShort);
+
+        for (let f = 0; f < bubbleShort.length; f++) {
+
+            for (let s = 0; s < bubbleShort.length; s++) {
+
+                if (bubbleShort[s] > bubbleShort[s + 1]) {
+                    let temp = bubbleShort[s];
+                    bubbleShort[s] = bubbleShort[s + 1];
+                    bubbleShort[s + 1] = temp;
+
+
+                }
+            }
+        }
+
+        document.write(" <br>secend <br>" + bubbleShort);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+<script>
+
+let myArray=[89,56,5455,5552,5855,55,555,585,5855,545,855,55,55,55,5,558,5,85585,2,5,5,58,55,8585,5,85,5,58,8,5,55,5];
+
+document.write(myArray);
+
+for(let f=0; f<myArray.length;f++){
+    for(let s=0; s<myArray.length; s++){
+        if(myArray[s]>myArray[s+1]){
+           temp=myArray[s];
+            myArray[s]=myArray[s+1];
+            myArray[s+1]=temp;
+
+
+        }
+
+
+    }
+    
+
+}
+
+document.write("<br>"+myArray);
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
