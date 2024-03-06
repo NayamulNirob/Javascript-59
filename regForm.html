@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <legend class="text-center mt-3">Application Form</legend>
+    <form class="row g-3 container mx-auto mt-3" id="regForm">
+        <div class="col-md-12">
+            <label for="" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="col-md-6">
+            <label for="" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col-md-6">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div><br>
+
+        <div class="col-md-4">
+
+            <div>
+                <label class="form-check-label" for="inlineRadio1">Gender</label>
+            </div>
+            <div class="form-check form-check-inline mt-2">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="others" value="others">
+                <label class="form-check-label" for="">Others</label>
+            </div>
+        </div>
+
+
+        <div class="col-md-5">
+
+            <div>
+                <label class="form-check-label" for="">Hobby</label>
+            </div>
+
+            <div class="form-check form-check-inline mt-2">
+                <input class="form-check-input" type="checkbox" id="" name="hobby" value="Gaming">
+                <label class="form-check-label" for="">Gaming</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" name="Coding" value="coding">
+                <label class="form-check-label" for="">Coding</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" name="Gardaing" value="Gardaing">
+                <label class="form-check-label" for="">Gardaing</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="" name="Travelling" value="Travelling">
+                <label class="form-check-label" for="">Travelling</label>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-md-3 mt-1">
+            <label for="" class="form-label">Subject</label>
+            <select id="subject" class="form-select">
+                <option selected>Choose...</option>
+                <option value="jee">JEE</option>
+                <option value="C#">C#</option>
+                <option value="gave">Gave</option>
+                <option value=".net">.Net</option>
+                <option value="ddd">DDD</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label">DOB</label>
+            <input type="datetime-local" class="form-control mt-3" id="dob">
+        </div>
+
+        <div class="col-md-1">
+
+        </div>
+
+        <div class="col-md-8">
+            <label>Address</label><br>
+            <textarea class="form-control" placeholder="Enter your full Address" id="address"></textarea>
+
+        </div>
+
+
+
+       
+        <div class="col-12">
+            <input type="submit" class="btn btn-primary" value="submit">
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="Form.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
