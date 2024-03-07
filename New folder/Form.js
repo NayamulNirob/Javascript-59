@@ -12,17 +12,18 @@ function dataForm(event) {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let gender = document.querySelector('input[name="gender"]:checked').value;
-
+    let Subject = document.getElementById('subject').value;
+    let DOB = document.getElementById('dob').value;
+    let Address = document.getElementById('address').value;
     let hobby = document.querySelectorAll('input[name="hobby"]:checked');
-    alert(hobby);
+
 
     let hobbyValue = [];
-    console.log("--------------------"+hobby);
+
     hobby.forEach(
 
         function(hobby) {
-
-            hobbyValue.push(hobby.Value);
+            hobbyValue.push(hobby.value);
 
         }
 
@@ -34,7 +35,10 @@ function dataForm(event) {
     output += "email:" + email + "\n";
     output += "password:" + password + "\n";
     output += "Gender:" + gender + "\n";
-    output += "Hobby:" + hobbyValue + "\n";
+    output += "Hobby:" +hobbyValue+ "\n";
+    output += "Subject:" + Subject + "\n";
+    output += "DOB:" + DOB + "\n";
+    output += "Address:" + Address + "\n";
 
 
     let newWindow = window.open("", '_blank');
@@ -58,5 +62,7 @@ function dataForm(event) {
 
 
 
-let regForm = document.getElementById("regForm");
-regForm.addEventListener('submit', dataForm);
+let regForm = document.getElementById("regForm"); 
+ regForm.addEventListener('submit', dataForm);
+
+
