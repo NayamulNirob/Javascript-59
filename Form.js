@@ -18,7 +18,7 @@ function dataForm(event) {
     let hobbyValue = [];
 
     hobby.forEach(
-
+ 
         function (hobby) {
 
             hobbyValue.push(hobby.Value);
