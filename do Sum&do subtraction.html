@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<label for="">First Box</label><br>
+<input type="number" id="box1"><br>
+<label for="">Secend Box</label><br>
+<input type="number" id="box2"><br>
+
+
+<input type="submit" value="Sum" onclick="doSum()">
+<input type="submit" value="Subtraction" onclick="doSubtraction()">
+
+
+
+<script>
+
+function doSum(){
+
+let box1=document.getElementById("box1").value;
+let box2=document.getElementById("box2").value;
+
+let bx1Toint=parseFloat(box1);
+let bx2Toint=parseFloat(box2);
+
+
+let result=bx1Toint+bx2Toint;
+
+document.write(result);
+
+}
+
+
+function doSubtraction(){
+
+let box1=document.getElementById("box1").value;
+let box2=document.getElementById("box2").value;
+
+let bx1Toint=parseFloat(box1);
+let bx2Toint=parseFloat(box2);
+
+
+let result=bx1Toint-bx2Toint;
+
+document.write(result);
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

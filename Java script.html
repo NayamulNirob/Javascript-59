@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+
+
+<body>
+
+
+    <label>Number 1</label>
+    <input type="number" id="number1"><br>
+
+
+    <label>Number 2</label>
+    <input type="number" id="number2"><br>
+
+
+
+    <input type="submit" value="Sum" onclick="doSum()">
+
+    <input type="submit" value="Subtraction" onclick="doSubtraction()">
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function doSum() {
+
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+
+            let nu1ToInt = parseFloat(number1);
+            let nu2ToInt = parseFloat(number2);
+
+            let result = nu1ToInt + nu2ToInt;
+
+
+            document.write(result);
+
+
+        }
+
+
+
+
+
+        function doSubtraction() {
+
+            let number1 = document.getElementById('number1').value;
+            let number2 = document.getElementById('number2').value;
+
+            let nu1ToInt = parseFloat(number1);
+            let nu2ToInt = parseFloat(number2);
+
+            let result = nu1ToInt - nu2ToInt;
+
+
+            document.write(result);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

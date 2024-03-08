@@ -14,31 +14,19 @@ function dataForm(event) {
     let gender = document.querySelector('input[name="gender"]:checked').value;
 
     let hobby = document.querySelectorAll('input[name="hobby"]:checked');
+    alert(hobby);
 
     let hobbyValue = [];
-
+    console.log("--------------------"+hobby);
     hobby.forEach(
- 
-        function (hobby) {
+
+        function(hobby) {
 
             hobbyValue.push(hobby.Value);
 
         }
 
-
-
-
     );
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+
+        let myArrey = [50, 15, 19, 17, 13, 33, 48, 57, 98, 99, 25, 27]
+
+        document.write(myArrey);
+
+
+
+        for (let first = 0; first < myArrey.length; first++) {
+            for (let secend = 0; secend < myArrey.length - first - 1; secend++) {
+                if (myArrey[secend] > myArrey[secend + 1]) {
+                    let temp = myArrey[secend];
+                    myArrey[secend] = myArrey[secend + 1];
+                    myArrey[secend + 1] = temp;
+
+                }
+
+
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        document.write("<br> Shorted" + myArrey)
+
+
+
+    </script>
+
+</body>
+
+</html>
