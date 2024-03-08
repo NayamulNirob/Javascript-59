@@ -129,18 +129,24 @@ function dataForm(event) {
 
     // end validation
 
+     let hobbyValue=[];
 
+     for(let index=0; index<hobby.length; index++){
 
-    let hobbyValue = [];
+        hobbyValue.push(hobby[index].value);
 
-    hobby.forEach(
+     }
 
-        function (hobby) {
-            hobbyValue.push(hobby.value);
+    // let hobbyValue = [];
 
-        }
+    // hobby.forEach(
 
-    );
+    //     function (hobby) {
+    //         hobbyValue.push(hobby.value);
+
+    //     }
+
+    // );
 
 
 
