@@ -12,9 +12,9 @@ function dataForm(event) {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let gender = document.querySelector('input[name="gender"]:checked');
-    let Subject = document.getElementById('subject').value;
-    let DOB = document.getElementById('dob').value;
-    let Address = document.getElementById('address').value;
+    let subject = document.getElementById('subject').value;
+    let dob= document.getElementById('dob').value;
+    let address = document.getElementById('address').value;
     let hobby = document.querySelectorAll('input[name="hobby"]:checked');
 
 
@@ -33,7 +33,7 @@ function dataForm(event) {
 
     }
 
-    else { pName }
+
 
 
     const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -44,7 +44,7 @@ function dataForm(event) {
 
     if (email == '') {
 
-        alert('Can Not be Blank');
+        alert('Email Can Not be Blank');
         return;
     }
 
@@ -53,12 +53,12 @@ function dataForm(event) {
     }
 
     else {
-        alert("Please Enter a Vlaid Email Address");
+        alert("Please Enter a Vlaid Email address");
         return;
     }
 
 
-    if (password == ' ') {
+    if (password == '') {
 
         alert('Can Not be Blank');
         return;
@@ -81,11 +81,7 @@ function dataForm(event) {
     }
 
 
-    else {
-
-        gender
-    }
-
+  
     if (hobby.length == 0) {
 
         alert('Atleast one hobby Must be Selected');
@@ -93,37 +89,28 @@ function dataForm(event) {
     }
 
 
-    else {
+    if (subject === "Subject..") {
 
-        hobby
-    }
-    if (Subject === "Subject..") {
-
-        alert("Subject must be Choosen");
+        alert("subject must be Choosen");
         return;
     }
 
-    else { Subject}
 
 
-    if(DOB==""){
+    if(dob==""){
 
         alert('Date and Time must be Selected');
         return;
     }
-    else{
-        DOB
-    }
+ 
 
-    if(Address==""){
+    if(address==""){
 
         alert('Addrees must be Fillup');
         return;
 
     }
-    else{
-        Address
-    }
+ 
 
 
 
@@ -155,9 +142,9 @@ function dataForm(event) {
     output += "password:" + password + "\n";
     output += "Gender:" + gender.value + "\n";
     output += "Hobby:" + hobbyValue + "\n";
-    output += "Subject:" + Subject + "\n";
-    output += "DOB:" + DOB + "\n";
-    output += "Address:" + Address + "\n";
+    output += "subject:" + subject + "\n";
+    output += "dob:" + dob+ "\n";
+    output += "address:" + address + "\n";
 
 
     let newWindow = window.open("", '_blank');
