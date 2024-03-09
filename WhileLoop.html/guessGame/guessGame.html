@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+const computerGuess=parseInt(Math.random()*100)+1;
+
+let attemp=0;
+
+while(attemp<=4){
+
+let userGuess=prompt("Enter A number");
+
+if(computerGuess==userGuess){
+
+document.write("Congraess You Guess right Number");
+
+break;
+
+}
+
+else if(computerGuess>userGuess){
+
+alert("You gueass Small Number");
+attemp++;
+
+}
+
+else if(computerGuess<userGuess){
+
+alert("You gueass big Number");
+attemp++;
+
+}
+
+if(attemp==4){
+
+    document.write("You loose the game <br>");
+    document.write("The number was" + computerGuess);
+    break;
+
+}
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
