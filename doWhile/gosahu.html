@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+<script>
+    
+let p =parseInt(prompt('Enter a num'));
+let q = parseInt(prompt('Enter a num'));
+
+function findHCF(p,q) {
+    let hcf;
+
+    let index = 0;
+
+    do {
+        if(p % index === 0 && q % index === 0) {
+            hcf = index;
+        }
+        index++;
+    } while (index <= p && index <= q);
+
+    return hcf;
+}
+
+document.write(findHCF(p, q));
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
