@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <label for=""
+        style="color: rgb(38, 0, 255); font-family: serif, cursive, fantasy, sans-serif; font-size: larger; ">Prodact
+        Price</label><br>
+    <input type="text" id="productPrice" onchange="actualPrice()" oninput="actualPrice()"><br>
+
+    <label for=""
+        style="color: rgb(38, 0, 255); font-family: serif, cursive, fantasy, sans-serif; font-size: larger; ">Quantity</label><br>
+    <input type="text" id="quantity" onchange="actualPrice()" oninput="actualPrice()"><br>
+
+    <label for=""
+        style="color: rgb(255, 0, 0); font-family: serif, cursive, fantasy, sans-serif; font-size: larger; ">Total
+        Price</label><br>
+    <input type="text" id="totalPrice" onchange="actualPrice()" oninput="actualPrice()"><br>
+
+    <label for=""
+        style="color: rgb(38, 0, 255); font-family: serif, cursive, fantasy, sans-serif; font-size: larger; ">Discount</label><br>
+    <input type="text" id="discount" onchange="actualPrice()" oninput="actualPrice()"><br>
+
+    <label for=""
+        style="color: rgb(38, 0, 255); font-family: serif, cursive, fantasy, sans-serif; font-size: larger; ">Discount
+        Amount</label><br>
+    <input type="text" id="discountAmount" onchange="actualPrice()" oninput="actualPrice()"><br>
+
+    <label for=""
+        style="color: rgb(206, 38, 169); font-family: serif, cursive, fantasy, sans-serif; font-size: larger; ">Fainal
+        Amount</label><br>
+    <input type="text" id="fainalAmount" onchange="actualPrice()" oninput="actualPrice()"><br>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function actualPrice() {
+
+            let productPrice = document.getElementById('productPrice').value;
+            let quantity = document.getElementById('quantity').value;
+            let totalPrice = document.getElementById('totalPrice').value;
+
+            let discount = document.getElementById('discount').value;
+            let discountAmount = document.getElementById('discountAmount').value;
+            let fainalAmount = document.getElementById('fainalAmount').value;
+
+
+
+            discountAmount = (totalPrice * discount) / 100;
+            document.getElementById('discountAmount').value = discountAmount;
+
+
+            fainalAmount = totalPrice - discountAmount;
+            document.getElementById('fainalAmount').value = fainalAmount;
+
+
+            totalPrice = productPrice * quantity;
+            document.getElementById('totalPrice').value = totalPrice;
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

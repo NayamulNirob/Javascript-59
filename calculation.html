@@ -19,13 +19,13 @@
     <input type="text" id="totalPrice" onchange="getTotalPrice()" oninput="getTotalPrice()"><br>
 
     <br><label for="">Discount</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" id="discount" onchange="actualPrice()" oninput="actualPrice()"><br>
+    <input type="text" id="discount" onchange="getActualPrice()" oninput="getActualPrice()"><br>
 
     <br><label for="">Discount Amount</label>
-    <input type="text" id="discountAmount" onchange="actualPrice()" oninput="actualPrice()"><br>
+    <input type="text" id="discountAmount" onchange="getActualPrice()" oninput="getActualPrice()"><br>
 
     <br><label for="">Actual Price</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" id="actualPrice" onchange="actualPrice()" oninput="actualPrice()"><br>
+    <input type="text" id="actualPrice" onchange="getActualPrice()" oninput="getActualPrice()"><br>
 
 
 
@@ -45,13 +45,14 @@
         }
 
         function getActualPrice() {
-
+            
+            let totalPrice = document.getElementById('totalPrice').value;
             let discount = document.getElementById('discount').value;
             let discountAmount = document.getElementById('discountAmount').value;
             let actualPrice = document.getElementById('actualPrice').value;
 
             actualP= totalPrice-(totalPrice*discount)/100;
-            document.getElementById('actualPrice').value=actualPrice;
+            document.getElementById('actualPrice').value=actualP;
 
             disaM=(totalPrice*discount)/100;
             document.getElementById('discountAmount').value=disaM;
