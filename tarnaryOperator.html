@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For practice</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <script>
+
+        // First tarnary start
+
+        let number1 = prompt('Enter 1st number');
+        let number2 = prompt('Enter 2nd number');
+        let number3 = prompt('Enter 3rd number');
+
+        let tResult=number1>number2 && number1>number3?number1 : number2>number1 && number2>number3?number2:number3;
+        document.write(tResult + " is the heighest number of three" + "<br>");
+
+        // First tarnary end 
+
+        // 2nd tarnary start
+
+        let number=prompt("Enter number to find positive or not")
+
+
+        let tarnary = number > 0 ? "positive" : number == 0 ? "Zero" : "Negative";
+        document.write("<br>"+number+" is a " +tarnary+" Number"+"<br>")
+
+         // 2nd tarnary end
+
+       
+        // 3rd tarnary start
+
+        let age = prompt('Enter your age');
+
+        let aresult=age>=18? 'Adult': age>10?'Teenager': 'Child'
+
+
+        
+        document.write("<br>"+aresult+"<br>");
+
+        // 3rd tarnary end
+
+        // 4th tarnary start
+
+        let oddEven=prompt("Enter a number to check Odd or Even");
+        result= oddEven%2===0 ? 'Even': 'Odd';
+        document.write("<br>"+result);
+
+        // 4th tarnary end
+
+
+        
+
+
+            
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+    <script>
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
