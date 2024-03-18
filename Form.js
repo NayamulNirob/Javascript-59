@@ -17,7 +17,7 @@ function dataForm(event) {
     alert(hobby);
 
     let hobbyValue = [];
-    console.log("--------------------"+hobby);
+   
     hobby.forEach(
 
         function(hobby) {
