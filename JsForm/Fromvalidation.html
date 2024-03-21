@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="" method="post" id="form">
+
+<label for="">Name</label><br>
+<input type="text" id="name"><br>
+<label for="">Contact</label><br>
+<input type="text" id="contact"><br>
+<label for="">Remarks</label><br>
+<textarea name="" id="remarks" cols="30" rows="10"></textarea><br>
+<label for="">Sex</label><br>
+<input type="radio" name="sex" value="Male">Male
+<input type="radio" name="sex" value="Female">Female
+<input type="radio" name="sex" value="Others">Others <br>
+
+<label for="" >Course</label><br>
+<input type="checkbox" name="course" value="NT">NT
+<input type="checkbox" name="course" value="IAD">IAD
+<input type="checkbox" name="course" value="DDD">DDD
+<input type="checkbox" name="course" value="ESAD">ESAD <br>
+
+<label for="">Location</label><br>
+<select name="location" id="location">
+<option value="">select--location</option>
+<option value="Bonani">Bonani</option>
+<option value="Dhanmondhi">Dhanmondhi</option>
+<option value="Mirpur">Mirpur</option>
+</select> <br>
+<br>
+<input type="submit" value="Submit" onclick="fromAct()">
+
+</form>
+
+<script>
+
+function fromAct(event){
+
+let name=document.getElementById("name").value;
+let contact=document.getElementById("contact").value;
+let remarks=document.getElementById("remarks").value;
+let gender=document.querySelector('input[name="sex"]:checked').value;
+let course=document.querySelectorAll('input[name="course"]:checked');
+let location=document.getElementById("location").value;
+
+
+let courseValue=[]
+
+for(let i=0; i<course.length;i++){
+
+courseValue.push(course[i].value);
+
+}
+
+
+let outPut="Name:"+name+"\n"
+outPut+="Contact:"+contact+"\n"
+outPut+="Remarks:"+remarks+"\n"
+outPut+="Gender:"+gender+"\n"
+outPut+="Course:"+courseValue+"\n"
+outPut+="Location:"+location+"\n"
+
+
+let newWindow=window.open("",'_blank');
+newWindow.document.write("<pre>"+outPut+"</pre>");
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
