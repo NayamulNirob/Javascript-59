@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="post" id="validation">
+
+        <fieldset>
+
+            <legend>Online Application From</legend>
+
+            <label for="">Name</label><br>
+            <input type="text" id="name"><br>
+            <label for="">Contact</label><br>
+            <input type="text" id="contact"><br>
+            <label for="">Remarks</label><br>
+            <textarea name="" id="remarks" cols="22" rows="10"></textarea><br>
+            <label for="">Sex</label><br>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Others">Others <br>
+            <label for="">Course</label><br>
+            <input type="checkbox" name="course" value="NT">NT
+            <input type="checkbox" name="course" value="LAD">LAD
+            <input type="checkbox" name="course" value="DDD">DDD
+            <input type="checkbox" name="course" value="ESAD">ESAD <br>
+            <label for="">Place</label><br>
+            <select name="place" id="place">
+                <option value="">Choose--location </option>
+                <option value="Bonani">Bonani</option>
+                <option value="Dhanmondi">Dhanmondi</option>
+                <option value="Mirpur">Mirpur</option>
+                <option value="Mohammodpur">Mohammodpur</option>
+
+            </select><br>
+            <br>
+
+
+            <input type="submit" value="Submit" onclick="formSubmit(event)">
+
+
+        </fieldset>
+
+    </form>
+
+
+
+
+    <script>
+
+        function formSubmit(event) {
+
+           
+
+            let name = document.getElementById("name").value;
+            let contact = document.getElementById("contact").value;
+            let remarks = document.getElementById("remarks").value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let course = document.querySelectorAll('input[name="course"]:checked');
+            let place = document.getElementById("place").value;
+
+
+            let courseValue = [];
+
+            for (let i = 0; i <course.length; i++) {
+
+
+                courseValue.push(course[i].value);
+
+
+            }
+
+
+
+            let outPut ="Name: " + name + "\n"
+            outPut += "Contact: " + contact + "\n"
+            outPut += "Remarks: " + remarks + "\n"
+            outPut += "Gender: " + gender + "\n"
+            outPut += "Course: " + courseValue + "\n"
+            outPut += "Place: " + place + "\n"
+
+
+
+
+            let newWindow = window.open("", '_blank');
+            newWindow.document.write("<pre>" +outPut+ "</pre>");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
