@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="post" id="form">
+
+        <label for="">Name</label><br>
+        <input type="text" id="name"><br>
+        <label for="">Contact</label><br>
+        <input type="text" id="content"><br>
+        <label for="">Remarks</label><br>
+        <textarea name="" id="remarks" cols="30" rows="10"></textarea><br>
+        <label for="">Gender</label><br>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female <br>
+        <label for="">Course</label><br>
+        <input type="checkbox" value="NT" name="course">NT
+        <input type="checkbox" value="LAD" name="course">LAD
+        <input type="checkbox" value="DDD" name="course">DDD
+        <input type="checkbox" value="ESAD" name="course">ESAD <br>
+        <label for="">Place</label><br>
+        <select name="place" id="place">
+            <option value="">Select--One</option>
+            <option value="Banani">Bonani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select> <br>
+
+        <br>
+        <input type="submit" value="submit" onclick="fromActive(event)">
+
+
+    </form>
+
+
+
+    <script>
+
+        function fromActive(event) {
+
+            event.preventDefault();
+
+
+            let name = document.getElementById("name").value;
+            let content = document.getElementById("content").value;
+            let remarks = document.getElementById("remarks").value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let course = document.querySelectorAll('input[name="course"]:checked');
+            let place = document.getElementById("place").value;
+
+            let courseValue = [];
+
+            course.forEach(
+                function (course) {
+
+                    courseValue.push(course.value);
+                }
+            );
+
+      
+
+
+            let output = "Name: " + name + "\n";
+            output += "Contact: " + content + "\n";
+            output += "Remarks: " + remarks + "\n";
+            output += "Gender: " + gender + "\n";
+            output += "Subject: " + courseValue + "\n";
+            output += "place: " + place + "\n";
+
+
+            let newWindow = window.open("", '_blank');
+            newWindow.document.write("<pre>" + output + "</pre>");
+
+
+        }
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
