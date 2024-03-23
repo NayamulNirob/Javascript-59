@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" method="post" id="form">
+Name <br>
+<input type="text" id="name"><br>
+Contact <br>
+<input type="text" id="contact"><br>
+Sex  <br>
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female <br>
+Course <br>
+<input type="checkbox" name="course" value="NT">NT
+<input type="checkbox" name="course" value="IAD">IAD
+<input type="checkbox" name="course" value="DDD">DDD
+<input type="checkbox" name="course" value="ESAD">ESAD <br>
+location <br>
+<select name="" id="location">
+    <option value="Banani">Banani</option>
+    <option value="Dhanmondi">Dhanmondi</option>
+    <option value="Mirpur">Mirpur</option>
+</select><br>
+
+<br>
+<input type="submit" value="submit" onclick="formPost(event)">
+</form>
+
+<script>
+
+function formPost(event){
+
+event.preventDefault()
+
+let name=document.getElementById("name").value;
+let contact=document.getElementById("contact").value;
+let gender=document.querySelector('input [name="gender"]:checked');
+let course=document.querySelectorAll('input [name="course"]:checked');
+let location=document.getElementById("location").value;
+
+
+let courseValue=[]
+
+for(let i=0;i<course.length;i++){
+
+courseValue.push(course[i].value);
+
+
+}
+
+
+let outPut="Name:"+name+"\n"
+outPut+="Contact:"+contact+"\n"
+outPut+="Gender:"+gender+"\n"
+outPut+="Course:"+courseValue+"\n"
+outPut+="Location:"+location+"\n"
+
+
+let newWindow=window.open("",'_blank')
+newWindow.document.write("<pre>"+outPut+"</pre>")
+
+}
+
+form.addEventListener("submit",formPost)
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
