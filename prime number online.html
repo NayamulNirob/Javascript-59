@@ -16,19 +16,24 @@
 
 
     <script>
-        let userInput = prompt("Pls enter begaining Number ");
+        let userInput = prompt("Pls enter Number ");
+        let count=0;
 
-        for (let i = userInput; i <= 100; i++) {
+        for (let i = 1; i <= userInput; i++) {
 
-            if (i % 2 != 0) {
-                document.write(i + "</br>");
+            if ( userInput%i == 0) {
+                count+=1;
+               
             }
-            else {
+          
+        }
 
+        if(count==2){
 
-            }
-
-
+            document.write(userInput+" prime");
+        }
+        else{
+            document.write(userInput+" Not prime");
         }
     </script>
 
