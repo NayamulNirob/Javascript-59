@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="container form-control mt-2" id="form" >
+        <h1 class="text-center">Application Form</h1>
+        <div class="row mt-3">
+
+            <div class=" col-md-6 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">contact</label>
+                <input type="text" class="form-control" id="contact">
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Remarks</label>
+            <textarea class="form-control" id="remarks" rows="3"></textarea>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <label for="">Gender</label> <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" value="Male">
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" value="Female">
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" value="Others">
+                    <label class="form-check-label" for="inlineRadio3">Others</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="">Course</label> <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Course" value="JEE">
+                    <label class="form-check-label" for="inlineCheckbox1">JEE</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Course" value="DDD">
+                    <label class="form-check-label" for="inlineCheckbox2">DDD</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Course" value="NT">
+                    <label class="form-check-label" for="inlineCheckbox3">NT</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Course" value="Gave">
+                    <label class="form-check-label" for="inlineCheckbox3">Gave</label>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+
+                <select class="form-select" aria-label="Default select example" id="location">
+                    <option selected>Open this select menu</option>
+                    <option value="Bonani">Bonani</option>
+                    <option value="Dhanmondi">Dhanmondi</option>
+                    <option value="Mirpur">Mirpur</option>
+                </select>
+            </div>
+
+
+        </div>
+
+        <input class="btn btn-primary mt-3" type="submit" value="Submit" onclick="formSubmit(event)">
+    </div>
+
+
+    <script>
+        function formSubmit(event) {
+
+            let name = document.getElementById("name").value;
+            let contact = document.getElementById("contact").value;
+            let remarks = document.getElementById("remarks").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let course = document.querySelectorAll('input[name="Course"]:checked');
+            let location = document.getElementById("location").value;
+
+
+            let courseValue = []
+
+            for (i = 0; i < course.length; i++) {
+
+                courseValue.push(course[i].value);
+
+            }
+
+            let output = "Name:" + name + "\n"
+            output += "Contact:" + contact + "\n"
+            output += "Remarks:" + remarks + "\n"
+            output += "Gender:" + gender.value + "\n"
+            output += "Course:" + courseValue + "\n"
+            output += "Location:" + location + "\n"
+
+            let newWindow=window.open("",'_blank')
+            newWindow.document.write("<pre>"+output+"</pre>");
+        }
+    //    form.addEventListener("submit", formSubmit)
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

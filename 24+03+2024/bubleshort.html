@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let myArray=[10,50,60,15,85,69,585,9585,5851,52,84,56]
+document.write("<br>"+myArray+"<br>");
+
+for(let first=0; first<myArray.length;first++){
+
+    for (let secend=0; secend<myArray.length-first-1; secend++ ){
+
+        if(myArray[secend]>myArray[secend+1]){
+
+            temp=myArray[secend];
+            myArray[secend]=myArray[secend+1];
+            myArray[secend+1]=temp;
+        }
+
+
+
+    }
+
+
+
+
+}
+
+document.write("<br>"+myArray+"</br>");
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
