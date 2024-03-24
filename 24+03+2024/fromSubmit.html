@@ -12,7 +12,7 @@
 <body>
 
 
-    <div class="container form-control mt-2" id="form" >
+    <div class="container form-control mt-2" id="form">
         <h1 class="text-center">Application Form</h1>
         <div class="row mt-3">
 
@@ -70,7 +70,7 @@
             <div class="col-md-4 mb-3">
 
                 <select class="form-select" aria-label="Default select example" id="location">
-                    <option selected>Open this select menu</option>
+                    <option selected>Select location</option>
                     <option value="Bonani">Bonani</option>
                     <option value="Dhanmondi">Dhanmondi</option>
                     <option value="Mirpur">Mirpur</option>
@@ -85,6 +85,7 @@
 
 
     <script>
+
         function formSubmit(event) {
 
             let name = document.getElementById("name").value;
@@ -93,6 +94,55 @@
             let gender = document.querySelector('input[name="gender"]:checked');
             let course = document.querySelectorAll('input[name="Course"]:checked');
             let location = document.getElementById("location").value;
+
+
+            if (name == '') {
+
+                alert("Name Can Not Be Empty");
+                return;
+            }
+            else if (name.length <= 3) {
+
+                alert("Name Can Not Be less then 4 Charectar");
+                return;
+
+            }
+
+            if (contact == '') {
+
+                alert("Must fillup the contact filed");
+                return;
+            }
+
+
+            if (remarks == '') {
+
+                alert("Must fillup the remarks filed");
+                return;
+
+
+            }
+
+            if (gender == null) {
+
+                alert('Gender Must be Selected');
+                return;
+            }
+
+
+
+            if (course.length == 0) {
+
+                alert('Atleast one course Must be Selected');
+                return;
+            }
+
+            if (location === "Select location") {
+
+                alert("Location must be Selected");
+                return;
+            }
+
 
 
             let courseValue = []
@@ -110,10 +160,18 @@
             output += "Course:" + courseValue + "\n"
             output += "Location:" + location + "\n"
 
-            let newWindow=window.open("",'_blank')
-            newWindow.document.write("<pre>"+output+"</pre>");
+            let newWindow = window.open("", '_blank')
+            newWindow.document.write("<pre>" + output + "</pre>");
+
+
+
+
+
+
+
+
         }
-    //    form.addEventListener("submit", formSubmit)
+        //    form.addEventListener("submit", formSubmit)
 
     </script>
 
