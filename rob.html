@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        Name <br>
+        <input type="text" id="name"><br>
+        Remarks <br>
+        <textarea id="remarks" cols="30" rows="2"></textarea><br>
+        Gender <br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
+        Course <br>
+        <input type="checkbox" name="course" value="nt">NT
+        <input type="checkbox" name="course" value="ddd">DDd <br>
+        Location <br>
+        <select id="location">
+            <option selected>choose</option>
+            <option value="banani">Banani</option>
+            <option value="dhanmondi">Dhanmondi</option>
+            <option value="mirpur">Mirpur</option>
+        </select><br>
+        <input type="submit" value="submit"><br>
+    </form>
+
+
+
+
+    <script>
+
+
+
+
+
+        function submitForm(event) {
+
+
+
+            let rName = document.getElementById("name").value;
+            let remarks = document.getElementById("remarks").value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let course = document.querySelectorAll('input[name="course"]:checked');
+            let location = document.getElementById("location").value;
+            let courseValue = [];
+            for (let i = 0; i < course.length; i++) {
+                courseValue.push(course[i].value);
+
+            }
+
+
+            let output = "Name:" + rName + "\n";
+            output += "Remarks:" + remarks + "\n";
+            output += "Gender:" + gender + "\n";
+            output += "Course:" + courseValue + "\n";
+            output += "Location:" + location + "\n"
+
+
+
+
+
+            let newWindow = window.open("", '_blank');
+            newWindow.document.write("<pre>" + output + "</pre>");
+
+        }
+      
+        myForm.addEventListener('submit', submitForm);
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
