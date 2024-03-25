@@ -11,31 +11,40 @@
 
 <body>
 
+    <div class="container form-control mt-1" id="form">
 
-    <div class="container form-control mt-2" id="form">
-        <h1 class="text-center">Application Form</h1>
-        <div class="row mt-3">
+        <h1 class="text-center mt-2 mb-2">Application From</h1>
 
-            <div class=" col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label">contact</label>
-                <input type="text" class="form-control" id="contact">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">contact</label>
+                    <input type="text" class="form-control" id="contact">
+                </div>
             </div>
+
 
         </div>
+
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Remarks</label>
             <textarea class="form-control" id="remarks" rows="3"></textarea>
         </div>
 
-        <div class="row">
 
-            <div class="col-md-4">
-                <label for="">Gender</label> <br>
-                <div class="form-check form-check-inline">
+        <div class="row mt-2">
+
+            <div class="col-md-4 ">
+                <label for="">Gender</label><br>
+                <div class="form-check form-check-inline mt-2">
                     <input class="form-check-input" type="radio" name="gender" value="Male">
                     <label class="form-check-label" for="inlineRadio1">Male</label>
                 </div>
@@ -49,38 +58,43 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <label for="">Course</label> <br>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="Course" value="JEE">
+                <label for="">Course</label><br>
+                <div class="form-check form-check-inline mt-2">
+                    <input class="form-check-input" type="checkbox" name="course" value="JEE">
                     <label class="form-check-label" for="inlineCheckbox1">JEE</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="Course" value="DDD">
+                    <input class="form-check-input" type="checkbox" name="course" value="DDD">
                     <label class="form-check-label" for="inlineCheckbox2">DDD</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="Course" value="NT">
+                    <input class="form-check-input" type="checkbox" name="course" value="C#">
+                    <label class="form-check-label" for="inlineCheckbox3">C#</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="course" value="NT">
                     <label class="form-check-label" for="inlineCheckbox3">NT</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="Course" value="Gave">
-                    <label class="form-check-label" for="inlineCheckbox3">Gave</label>
-                </div>
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4">
 
                 <select class="form-select" aria-label="Default select example" id="location">
-                    <option selected>Select location</option>
-                    <option value="Bonani">Bonani</option>
+                    <option selected disabled>Location</option>
                     <option value="Dhanmondi">Dhanmondi</option>
                     <option value="Mirpur">Mirpur</option>
+                    <option value="Mohamodpur">Mohamodpur</option>
+                    <option value="Gulsan">Gulsan</option>
+                    <option value="Bonani">Bonani</option>
                 </select>
+
             </div>
 
 
         </div>
 
-        <input class="btn btn-primary mt-3" type="submit" value="Submit" onclick="formSubmit(event)">
+        <input class="btn btn-outline-secondary mt-4" type="submit" value="Submit" onclick="formSubmit(event)">
+
     </div>
 
 
@@ -91,16 +105,17 @@
             let name = document.getElementById("name").value;
             let contact = document.getElementById("contact").value;
             let remarks = document.getElementById("remarks").value;
-            let gender = document.querySelector('input[name="gender"]:checked');
-            let course = document.querySelectorAll('input[name="Course"]:checked');
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let course = document.querySelectorAll('input[name="course"]:checked');
             let location = document.getElementById("location").value;
 
 
             if (name == '') {
 
-                alert("Name Can Not Be Empty");
+                alert("Name fild must be fillup");
                 return;
             }
+
             else if (name.length <= 3) {
 
                 alert("Name Can Not Be less then 4 Charectar");
@@ -110,39 +125,30 @@
 
             if (contact == '') {
 
-                alert("Must fillup the contact filed");
+                alert("Contact fild must be fillup");
                 return;
             }
-
-
             if (remarks == '') {
 
-                alert("Must fillup the remarks filed");
+                alert("Remarks fild must be fillup");
                 return;
-
-
             }
-
             if (gender == null) {
 
-                alert('Gender Must be Selected');
+                alert("Gender must be selected");
                 return;
             }
-
-
 
             if (course.length == 0) {
 
-                alert('Atleast one course Must be Selected');
+                alert("At least select one Course");
                 return;
             }
+            if (location === "Location") {
 
-            if (location === "Select location") {
-
-                alert("Location must be Selected");
+                alert("Select your location please");
                 return;
             }
-
 
 
             let courseValue = []
@@ -153,27 +159,28 @@
 
             }
 
-            let output = "Name:" + name + "\n"
-            output += "Contact:" + contact + "\n"
-            output += "Remarks:" + remarks + "\n"
-            output += "Gender:" + gender.value + "\n"
-            output += "Course:" + courseValue + "\n"
-            output += "Location:" + location + "\n"
+
+            let outPut = "Name:" + name + "\n"
+            outPut += "Contact:" + contact + "\n"
+            outPut += "Remarks:" + remarks + "\n"
+            outPut += "Gender:" + gender + "\n"
+            outPut += "Course:" + courseValue + "\n"
+            outPut += "Location:" + location + "\n"
+
 
             let newWindow = window.open("", '_blank')
-            newWindow.document.write("<pre>" + output + "</pre>");
-
-
-
-
-
+            newWindow.document.write("<pre>" + outPut + "</pre>")
 
 
 
         }
-        //    form.addEventListener('submit', formSubmit);
+
+        // form.addEventListener('submit',formSubmit);
 
     </script>
+
+
+
 
 
 
