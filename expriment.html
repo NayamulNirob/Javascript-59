@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!DOCTYPE html>
+    <html>
+    <body>
+    
+    <h2>What Can JavaScript Do?</h2>
+    
+    <p>JavaScript can change HTML attribute values.</p>
+    
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    
+    <script>
+        function turnOnLight() {
+            document.getElementById('myImage').src = 'pic_bulbon.gif';
+        }
+    
+        function turnOffLight() {
+            document.getElementById('myImage').src = 'pic_bulboff.gif';
+        }
+    </script>
+    
+    <button onclick="turnOnLight()">Turn on the light</button>
+    
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    
+    <button onclick="turnOffLight()">Turn off the light</button>
+
+    
+    <input type="button" value="Change Color" onclick="document.bgColor='green'"
+        onmouseleave="document.bgColor='yellow'" onmouseenter="document.bgColor='red'">
+    
+    </body>
+    </html>
+    
+
+</body>
+</html>

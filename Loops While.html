@@ -17,17 +17,32 @@
         //whaile loop start
 
         let i = prompt("Factorial");
-        let fac = 1;
+        let Factorial = 1;
 
         while (i >= 1) {
 
-            fac *= i
+            Factorial *= i
             i--
+
         }
-        document.write("<br>" + "Factorial " + fac + "<br>");
+        document.write("<br>" + "Factorial " + Factorial + "<br>");
 
         //whaile loop end
 
+        // for loop start 
+
+        let number = prompt("userInput");
+        let fac = 1;
+
+
+        for (i = number; i > 1; i--) {
+
+            fac *= i
+        }
+        document.write(fac)
+
+
+        // for loop end
 
     </script>
 
